@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script>
+		function add() 
+		{
+			var data="";
+			data=data+"name:"+document.getElementById("fname").value;
+              var arr=document.getElementsByName("ck1");
+              console.log(arr);
+              data=data+"<br> Hobbies:"
+              for(var i=0;i<arr.length;i++)
+              {
+              	if(arr[i].checked)
+              	{
+              		data=data+arr[i].value;
+              	}
+              }
+              
+		var genderarr=document.getElementsByName("r1");
+		data=data+"<br> Gender:"
+		for(var i=0;i<genderarr.length;i++)
+              {
+              	if(genderarr[i].checked)
+              	{
+              		data=data+genderarr[i].value;
+              		break;
+              	}
+              }
+              var scity=document.getElementById("city");
+              var idx=scity.selectedIndex;
+              alert(idx);
+              data=data+"<br> City:"+scity.options[idx].value;
+              document.getElementById("d1").innerHTML=data;
+
+              var fruname=document.getElementById("t1").value;
+              var ul=document.getElementById("fruitlist");
+              var li=document.createElement('li');
+              li.innerHTML=fruname;
+              ul.appendChild(li);
+		
+          }
+
+	</script>
+</head>
+<body>
+<form>
+	<br><br>
+	name:<input type="text" id="fname"><br>
+	Hobbies:<input type="checkbox" name="ck1" value="reading" checked>Reading
+	<input type="checkbox" name="ck1" value="cricket">Cricket
+	<input type="checkbox" name="ck1" value="music">Music
+	<br>
+	Gender:<input type="radio" name="r1" value="Male">Male
+	<input type="radio" name="r1" value="female" checked>Female<br>
+
+	city:<select id="city">
+		<option value="Pune">Pune</option>
+				<option value="mumbai">Mumbai</option>
+		<option value="delhi">Delhi</option>
+
+	</select>
+	<br>
+	<input type="button" value="Add" onclick="add()">
+	<div id="d1"></div>
+	Add fruits:<input type="text" id="t1"><br>
+	<input type="button" value="add" onclick="add()">
+	<ul id="fruitlist">
+		<li>Mango</li>
+	</ul>
+</form>
+</body>
+</html>

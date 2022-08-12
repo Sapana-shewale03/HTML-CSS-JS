@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function add()
+		{
+		
+		var table=document.getElementById("table1");
+		var nm=document.getElementById("t1").value;
+              var perc=document.getElementById("t2").value;
+              var tr=table.insertRow();
+              var td1=tr.insertCell(0);
+              var td2=tr.insertCell(1);
+              td1.innerHTML=nm;
+              td2.innerHTML=perc;
+
+          td.innerHTML=studentinfoo;           
+              th.appendChild(td);
+                            th.appendChild(td);
+
+		}
+	</script>
+</head>
+<body>
+
+Students Name:<input type="text" id="t1"><br>
+Students percentage:<input type="text" id="t2"><br>
+
+	<input type="button" value="add" onclick="add()"><br><br>
+	
+
+	<table border="1" id="table1">
+  <tr id="studinfo">
+ <th>students</th>
+<th>percentage</th>
+</tr>
+  <tr>
+    <td>sapna</td>
+    <td>90</td>
+  </tr>
+</table>
+
+</body>
+</html>
+ 

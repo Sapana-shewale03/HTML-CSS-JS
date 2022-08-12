@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		let arr =[11,12,13,14,"deepa"];
+		console.log(arr);
+        //push data at end
+        arr.push(90);
+        arr.push("sapna");
+        //unshift add data at front
+        arr.unshift("divya");
+        console.log(arr);
+        //remove from last
+        var rem=arr.pop();
+        console.log(arr);
+        arr.shift();//remove from from  or first
+        console.log(arr);
+
+        ///splice and slice
+
+        var arr2=arr.slice(1,6);//return a new array  with elemnt from specified elemnts start to end-1
+        console.log(arr);
+        console.log(arr2);
+        //spllice to add and delete from origuinal array ['divya',11,12,13,14,'deepa',90,'sapana']
+        //splice(index,delete,data to be added)
+        arr.splice(1,2,"A","B","C")
+        console.log(arr);
+        //delete deepa
+        console.log(arr);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function greet(nm)
+		{
+			console.log("Good Morning "+nm);
+		}
+		var x= greet;
+		var r=x("shaila");
+		var m=90;
+		
+		var y=function()
+		{
+			console.log("bye");
+		};
+		y();
+
+function m1(bn)
+		{
+			console.log("in m1"+bn);
+		}
+		var b=m1;
+		var c=b(" gn");
+		var a=function()
+		{
+			console.log("gm")
+		};
+		a();
+
+        var x=function(a,b)
+        {
+        	alert("sum="+(a+b));
+        };
+		x(11,12);
+		var y=(a,b)=>alert("adition"+(a+b));
+		y(10,20);
+		function greet1()
+		{
+			console.log("welcome to tq");
+		}
+		function login( username,pass,f1)
+		{
+			f1();
+			if(username=="Admin" && pass=="123")
+				console.log("logiin success");
+			else
+				console.log("invalid login");
+		}
+		login("Admin","123",greet1);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<script type="text/javascript">
+		function factoial(n)
+		{
+			var fact=1;
+			for(var i=1;i<=n;i++)
+			{
+				fact=fact*i;
+			}
+			alert("factorial = "+fact);
+			console.log("factorial = "+fact);
+         	document.write("factorial = "+fact);
+
+		}
+		factoial(5);
+
+		function primenumber(n) 
+		{
+            var  i, isprime = true;
+            for(i = 2; i < n; i++)
+                if (n % i == 0) {
+                    isprime = false;
+                    break;
+                }     
+            if (isprime == true)
+            {
+                console.log(n + " is prime");
+                            document.write(n + " is prime")
+
+            }
+            else
+            {
+                console.log(n + " is not prime");
+                            document.write(n + " is not prime")
+
+            }
+        }
+        
+       primenumber(7);
+	</script>
+
+</head>
+<body>
+<script type="text/javascript">
+	factoial(7);
+	primenumber(11);
+</script>
+</body>
+</html>

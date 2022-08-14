@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootatrap tooterial</title>	
+	<script type="text/javascript">
+		var numOne,numTwo;
+function fun() 
+		{
+			
+			numOne = parseInt(document.getElementById("t1").value);
+           numTwo = parseInt(document.getElementById("t2").value);
+              res = numOne * numTwo;
+              document.getElementById("multiply").value = res;
+              
+          }
+          function fundi() 
+		{
+			
+			numOne = parseInt(document.getElementById("t1").value);
+           numTwo = parseInt(document.getElementById("t2").value);
+              
+               res = numOne / numTwo;
+                document.getElementById("divide").value = res;
+          }
+
+	</script>	
+</head>
+<body>
+
+1st number:<input type="text" id="t1"><br><br>
+2nd number:<input type="text" id="t2"><br><br>
+	<input type="button" value ="multiply" onclick="fun()">
+		<input type="button" value="devide"onclick="fundi()" ><br><br>
+The result is:<input id="multiply">
+<input id="divide">
+	<p >2.Adult peoples are:</p>
+
+<p id="demo"></p>
+<script type="text/javascript">
+	
+	//<!--1.	Show use of filter() with appropriate example-->
+const a=[34,67,87,2];
+document.getElementById("demo").innerHTML=a.filter(checkAdult);
+
+function checkAdult(a)
+{
+	return a>=18;
+}
+</script>
+<!-- 2.	Consider an array of employee [id,name,salary,location] Use array method to print those employees whose salary is greater than 10000.   -->
+<p>3.those emp whose salary is greater than 10000</p>
+<!-- 3.	WAP in JS to show difference is between == and ===, let var and const?-->
+<script type="text/javascript">
+var str="i love india";
+var str1="i love india";
+	console.log(str==str1);
+	console.log(str===str1);
+</script>
+
+<!--  4.	WAP in JS to explain fat arrow function .-->
+<script type="text/javascript">
+let names = ['prashant','golu','yadav','javascript'];
+let xyz = names.map((e) => `Hello ${e}`);
+console.log(xyz);
+</script>
+
+<!-- 5.	Write a code and show the three main ways to apply CSS in web page.-->
+<!--inline style stmt-->
+<h1 style="color: red">Test Headline</h1>
+<!--internal css-->
+<style>  
+  h1 {  
+    color: red;
+  }
+</style>
+<h1>Test Headline</h1>
+
+<!--external css we have create another file with extenion .css and include here-->
+
+<!-- 6.	Write a code to explain call back function.-->
+<p id="deva"></p>
+<script type="text/javascript">
+	function myDisplayer(some)
+	 {
+  document.getElementById("deva").innerHTML = some;
+}
+
+	function myFirst() 
+	{
+  myDisplayer("Hello");
+}
+function mySecond() {
+  myDisplayer("Goodbye");
+}
+
+myFirst();
+mySecond();
+</script>
+<!--  7.	Write a code to use a bootstrap class jumbroton and also on button .-->
+<div class="jumbotron">
+  <h1>Bootstrap Tutorial</h1>      
+  <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+</div>
+
+<!-- 8.	What is ajax ?  =>  The acronym of Ajax is Asynchronous JavaScript and XML. It can be defined as a path in which the user uses 
+	JavaScript to communicate with a web server to get a query generated response and to provide it on the webserver without the user leaving the current page.-->
+	<!--9.	What is call, apply and bind explain with example?-->
+	   <!--caLL-->
+	   <script type="text/javascript">
+	   let p2 = {
+  firstName: 'Ann',
+  lastName: 'Brown'
+
+}
+function getIntroduction(location, state) {
+     console.log(`${this.firstName} ${this.lastName} , stayed at ${location} ${state}`);
+  }
+getIntroduction.call(p2,'Mumbai','Maharastra');
+//appply()
+getIntroduction.call(p2, ['Mumbai','Maharastra']);
+//bind
+let newFun = getIntroduction.bind(p2,'Mumbai','Maharastra' );
+newFun();
+</script>
+
+
+<!--    10.	Explain rest and spread with example?-->
+<script type="text/javascript">
+
+    var array1 = [10, 20, 30, 40, 50];
+    var array2 = [...array1, 60];
+    console.log(array2);
+</script>
+<!-- 11.	Write 2 ways to create object?-->
+<script type="text/javascript">
+function vehicle(name,maker,engine){
+    this.name = name;
+}
+let car  = new vehicle('GT');
+console.log(car.name);
+//2nd way
+let car1 = {
+    name : 'GT',
+    
+};
+car1.brakesType = 'All Disc';
+console.log(car1);
+</script>
+<!---  12.	What is synchronous and asynchronous communication?==> synchronous communication happens at the same time and asynchronous communication happens with some kind of time delay. There are also some additional, related differences between the two terms. Synchronous communication, because it happens in real-time, is usually shorter, less thought out, and less planned.-->
+<!-- 13.	 What is Promise? ==>A “ promise ” is an engagement by a person to perform or do something in favor of another. From a legal perspective (in contract law), a promisee is a person to whom an offer is made or covenants promised.--->
+<!--14.	Explain async and await with example? -->
+<script type="text/javascript">
+	const getData = async() => {
+    var data = "Hello World";
+    return data;
+}
+getData().then(data => console.log(data));
+//await
+const getData1 = async() => {
+    var y = await "Hello World";
+    console.log(y);
+}
+ 
+console.log(1);
+getData1();
+console.log(2);
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		var a=[];////array
+		         //var b={} empty object
+		var b={"sid":101,"sname":"sana","percent":90};
+			var c={"sid":102,"sname":"sapana","percent":80};
+			document.write(JSON.stringify(b));
+			console.log(b.sid);
+			console.log(b.sname);
+			console.log(b.percent);
+
+			console.log("sid:"+b["sid"]);
+			console.log("name:"+b["sname"]);
+
+			b.city="pune";
+			b["mobile"]=8976567899;
+			b["snane"]="deepa";
+			console.log(b);
+			delete b.sname;
+		      
+		      function students(sid,sname,per)
+		      {
+		      	var ob={};
+		      	ob.rollno=sid;
+		      	ob.studentname=sname;
+		      	ob.percent=per;
+		      	return ob;
+		      }   
+
+		      var ob1=students(1,"om",478);
+		      console.log(ob1);
+		      // object creation by constructor
+		      function stud(sid,snm,per)
+		      {
+		      	this.rollno=sid;
+		      	this.studentname=snm;
+		      	this.percent=per;
+		      	/*this.display=function()
+		      	 {
+		      		console.log("rollno"+this.rollno+"  name : "+this.studentname+"  percent : "+this.percent );
+		      	}*/
+		      }
+		      //prototype
+		      stud.prototype.display=function() 
+		      {
+		      		console.log("rollno"+this.rollno+"  name : "+this.studentname+"  percent : "+this.percent );
+		      }
+		      var ob2=new stud(2,"sapan",98);
+		      var ob3=new stud(3,"san",98);
+              ob2.display();
+              ob3.display();
+		      console.log(ob2);
+
+
+		      var e1={"id":101,"name":"khhj","display":function(a,b,c)
+		      {
+		      	console.log(this);
+		      	console.log("IDD:"+this.id+" name :"+this.name+"a="+a+"b="+b+"c="+c);
+		      }
+		  };
+		 // e1.display(1,2,3);
+		  var s2={"id":1008,"name":"sushant"};
+		  var d1=e1.display;
+		  //d1.call(s2,10,20,30);
+		  var arr=[45,78,66];
+		  //d1.apply(s2,arr);
+		  var f2=d1.bind(s2);
+		  f2(12,78,66);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

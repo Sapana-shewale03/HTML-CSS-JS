@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function checkCookie()
+		 {
+		
+		if(document.myform.customer.value  =="")
+		{
+			alert("welcome back "+document.myform.customer.value +"!!!");
+		 return;
+               }
+               cookievalue= escape(document.myform.customer.value) + ";";
+               document.cookie="name=" + cookievalue;
+               document.write ("Setting Cookies : " + "name=" + cookievalue );
+            }
+
+            var one=prompt("enter the first value");
+            var two=prompt("enter second value");
+            one=parseInt(one);
+            two=parseInt(two);
+            if(one==two)
+            	document.write(one + " is equal to " + two);
+            else if(one<two)
+                document.write(one + " is less than " + two);
+            else
+            	document.write(one + " is greater than " + two);
+
+            function returnsum(f,s)
+            {
+            	var sum=f+s;
+            	return sum;
+            }
+            var first=34;
+            var seconf=78;
+            document.write("<br>"+first+" + "+seconf+ " = "+returnsum(first,seconf));
+
+
+            function createcookie(cookieName,cookieValue,daysToExpire)
+             {
+            	var date=new Date();
+            	date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+            	document.cookie=cookieName+ " = "+cookieValue+ " ; expire= "+daysToExpire;
+            	document.write ("Setting Cookies : " + "name=" + cookieName+" value "+cookieValue+" day "+daysToExpire );
+            }
+            function accessCookie(cookieName)
+             {
+                 var name=cookieName+" = ";
+                 var allCookieArray=document.cookie.split(';');
+                 for(var i=0;i<allCookieArray;i++)
+                 {
+                 	var temp=allCookieArray[i].trim();
+                 	if(temp.indexOf(name)==0)
+                 		return temp.substring(name.length.temp.length);
+                 }
+              	document.write ("name="+cookieName );
+
+
+             }
+
+	</script>
+</head>
+<body> <form name="myform" action="">
+         Enter name: <input type="text" name="customer"/>
+         <input type="button" value="Set Cookie" onclick="checkCookie();"/>
+                  <input type="button" value="create cookie" onclick="createcookie('cname','abcd',2);"/>
+         <input type="button" value="access cookie" onclick="accessCookie('hashtaog');"/>
+
+      </form>
+</body>
+</html>

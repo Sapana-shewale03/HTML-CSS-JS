@@ -31,6 +31,24 @@
         //delete deepa
         console.log(arr);
 
+        var stud= new Array("john","ann","tfv","ghgnn");
+        Array.prototype.displayItem=function()
+                                     {
+                                        for( var i=0;i<stud.length;i++)
+                                        {
+                                            document.write(stud[i]+"<br>");
+                                        }
+                                     }
+        document.write("student array");
+        stud.displayItem();
+        document.write("<br> students are"+stud);
+        document.write("<br> sorted order studentzs are");
+        stud.sort();
+        stud.displayItem();
+        document.write("reverse studnets");
+        stud.reverse();
+        stud.displayItem();                             
+
 	</script>
 </head>
 <body>

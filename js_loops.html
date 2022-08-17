@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		
+      document.write("<br> while loop<br>");
+     document.write("fibbonancie series less than 30<br>");
+      var i=0,j=1,k;
+
+     while(i<30)
+     {
+     	document.write(i+"<br/>");
+     	k=i+j;
+     	i=j;
+     	j=k;
+     }
+    document.write("<br> for loop and if statemnet<br>");
+    document.write("<br> count vowel<br>");
+    var count=0;
+    function countvowel(name)
+     {
+     	for(var i=0;i<name.length;i++)
+     	{
+     		if(name[i]=="a" || name[i]=="e"  || name[i]=="i" || name[i]=="o"|| name[i]=="u")
+     		{
+     			count=count+i;
+     		}
+     	}
+     	document.write("hello "+name+" !!! your name has "+count+ " vowels<br>");
+    }
+    var myname=prompt("please enter your name");
+    countvowel(myname);
+     document.write("<br>conditinal stmts<br>");
+     var age=prompt("please enter your age");
+     if(age<18)
+     	document.write("you are not adult")
+     else
+     	document.write("you are adult<br>");
+     
+     var hrs=new Date().getHours();
+     if(hrs<12)
+     	document.write("gm<br>");
+     else
+     	document.write("ga<br>")
+       
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
